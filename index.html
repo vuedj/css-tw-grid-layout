@@ -8,7 +8,7 @@
   </head>
   <body>
     <div
-      class="grid min-h-screen grid-cols-1 grid-rows-[64px_1fr_64px] gap-0 md:grid-cols-[240px_1fr_1fr]"
+      class="grid min-h-screen grid-cols-1 grid-rows-[64px_1fr_64px] gap-0 md:grid-cols-[240px_1fr]"
     >
       <div
         id="sidebar-backdrop"
@@ -24,7 +24,6 @@
           class="flex h-16 items-center justify-between border-b border-slate-800 px-4"
         >
           <span class="font-bold">Brand</span>
-          <!-- Close button (Hidden at md and above) -->
           <button
             onclick="toggleSidebar()"
             type="button"
@@ -38,7 +37,7 @@
       </aside>
 
       <header
-        class="row-start-1 flex items-center gap-4 border-b border-slate-200 bg-white px-4 md:col-span-2 md:col-start-2 md:row-start-1"
+        class="row-start-1 flex items-center gap-4 border-b border-slate-200 bg-white px-4 md:col-start-2 md:row-start-1"
       >
         <button
           onclick="toggleSidebar()"
@@ -63,14 +62,12 @@
         <span>Header</span>
       </header>
 
-      <main
-        class="row-start-2 bg-slate-50 p-4 md:col-span-2 md:col-start-2 md:row-start-2"
-      >
+      <main class="row-start-2 bg-slate-50 p-4 md:col-start-2 md:row-start-2">
         Main Content
       </main>
 
       <footer
-        class="row-start-3 flex items-center border-t border-slate-200 bg-white px-4 md:col-span-2 md:col-start-2 md:row-start-3"
+        class="row-start-3 flex items-center border-t border-slate-200 bg-white px-4 md:col-start-2 md:row-start-3"
       >
         Footer
       </footer>
