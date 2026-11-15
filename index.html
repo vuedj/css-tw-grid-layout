@@ -4,30 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>TailwindCSS v4 Layout</title>
   </head>
   <body>
     <div
-      class="grid min-h-screen grid-cols-1 grid-rows-[64px_1fr_64px] gap-0 lg:grid-cols-[240px_1fr_1fr]"
+      class="grid min-h-screen grid-cols-1 grid-rows-[64px_1fr_64px] gap-0 md:grid-cols-[240px_1fr_1fr]"
     >
       <div
         id="sidebar-backdrop"
         onclick="toggleSidebar()"
-        class="fixed inset-0 z-40 hidden bg-black/50 transition-opacity lg:hidden"
+        class="fixed inset-0 z-40 hidden bg-black/50 transition-opacity md:hidden"
       ></div>
 
       <aside
         id="sidebar"
-        class="fixed inset-y-0 left-0 z-50 w-[240px] -translate-x-full bg-slate-900 text-white transition-transform duration-300 ease-in-out lg:static lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:translate-x-0"
+        class="fixed inset-y-0 left-0 z-50 w-[240px] -translate-x-full bg-slate-900 text-white transition-transform duration-300 ease-in-out md:static md:col-start-1 md:row-span-3 md:row-start-1 md:translate-x-0"
       >
         <div
           class="flex h-16 items-center justify-between border-b border-slate-800 px-4"
         >
           <span class="font-bold">Brand</span>
+          <!-- Close button (Hidden at md and above) -->
           <button
             onclick="toggleSidebar()"
             type="button"
-            class="rounded p-1 hover:bg-slate-800 lg:hidden"
+            class="rounded p-1 hover:bg-slate-800 md:hidden"
             aria-label="Close sidebar"
           >
             ✕
@@ -37,12 +38,12 @@
       </aside>
 
       <header
-        class="row-start-1 flex items-center gap-4 border-b border-slate-200 bg-white px-4 lg:col-span-2 lg:col-start-2 lg:row-start-1"
+        class="row-start-1 flex items-center gap-4 border-b border-slate-200 bg-white px-4 md:col-span-2 md:col-start-2 md:row-start-1"
       >
         <button
           onclick="toggleSidebar()"
-          class="rounded-md p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
           type="button"
+          class="rounded-md p-2 text-slate-700 hover:bg-slate-100 md:hidden"
           aria-label="Open sidebar"
         >
           <svg
@@ -63,13 +64,13 @@
       </header>
 
       <main
-        class="row-start-2 bg-slate-50 p-4 lg:col-span-2 lg:col-start-2 lg:row-start-2"
+        class="row-start-2 bg-slate-50 p-4 md:col-span-2 md:col-start-2 md:row-start-2"
       >
         Main Content
       </main>
 
       <footer
-        class="row-start-3 flex items-center border-t border-slate-200 bg-white px-4 lg:col-span-2 lg:col-start-2 lg:row-start-3"
+        class="row-start-3 flex items-center border-t border-slate-200 bg-white px-4 md:col-span-2 md:col-start-2 md:row-start-3"
       >
         Footer
       </footer>
